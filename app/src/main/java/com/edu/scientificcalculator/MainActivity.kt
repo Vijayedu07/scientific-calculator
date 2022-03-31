@@ -89,6 +89,12 @@ class MainActivity : AppCompatActivity() {
                     var two = splitValue[1]
                     tvResult!!.text = (one.toDouble()/two.toDouble()).toString()
                 }
+                else if(tvValue.contains("%")){
+                    val splitValue = tvValue.split("%")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    tvResult!!.text = (one.toDouble()%two.toDouble()).toString()
+                }
                 else if(tvValue.contains("*")){
                     val splitValue = tvValue.split("*")
                     var one = splitValue[0]
